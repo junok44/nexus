@@ -1,0 +1,325 @@
+@charset 'utf-8';
+@import url('notosanskr/NotoSansKR.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.064rem;
+    color: #333;
+}
+
+.clearfix:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+.container {
+    width: 144rem;
+    margin: 0 auto;
+}
+
+/* 상단헤더 */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 8rem;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.header-active {
+    background-color: rgba(255, 255, 255, 1.0);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    font-size: 0;
+    width: 9rem;
+    height: 2.4rem;
+    background: url('../images/logo.png') no-repeat center;
+    background-size: 100%;
+}
+
+.nav {}
+
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    width: 46rem;
+}
+
+.gnb a {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.12rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.gnb-mobile {
+    border: 0;
+    background: none;
+    color: #fff;
+    display: none;
+}
+
+/* 상단 영역 반응형 */
+@media screen and (max-width:1440px) {
+    .header .container {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .header {
+        height: 6.5rem;
+    }
+
+    .header .container {
+        padding: 0 3rem;
+    }
+
+    .logo {
+        width: 7.8rem;
+        height: 2.4rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .gnb-mobile {
+        display: block;
+    }
+}
+
+/* 비주얼 */
+.visual {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/visual.jpg') no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.visual-story {
+    background-color: #fff;
+    width: 50%;
+    padding: 7rem 0 5.5rem 10rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.12rem;
+}
+
+/* 비주얼 영역 반응형 */
+@media screen and (max-width: 760px) {
+    .visual-story {
+        padding: 2rem 3rem;
+    }
+}
+
+/* 대표내용 */
+.contents {
+    position: relative;
+}
+
+.contents .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contents-box {
+    width: 50%;
+    height: 72rem;
+}
+
+.contents-1 {
+    background: url('../images/story_1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-2 {
+    background: #fff;
+}
+
+.contents-3 {
+    background: url('../images/story_3.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-4 {
+    background: url('../images/story_2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-5 {
+    background: url('../images/story_5.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-6 {
+    background: url('../images/story_4.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-7 {
+    background: #fff;
+}
+
+.contents-8 {
+    background: url('../images/story_6.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.contents-up {
+    margin-top: -15rem;
+}
+
+.contents-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 15rem;
+    background-color: #cfd1d4;
+} 
+
+@media screen and (max-width:1440px) {
+    .contents .container {
+        width: 100%;
+    }
+
+    .contents-box {
+        height: 50vw;
+    }
+
+    /* contents-box의 너비가 변하듯 높이도 변한다. */
+}
+
+@media screen and (max-width:1000px) {
+
+    .contents-box {
+        width: 100%;
+        height: 100vw;
+    }
+
+    .contents-1 {
+        order: 2;
+    }
+
+    .contents-2 {
+        order: 1;
+    }
+
+    .contents-3 {
+        order: 4;
+    }
+
+    .contents-4 {
+        order: 3;
+    }
+
+    .contents-5 {
+        order: 6;
+    }
+
+    .contents-6 {
+        order: 5;
+    }
+
+    .contents-7 {
+        order: 8;
+    }
+
+    .contents-8 {
+        order: 7;
+    }
+
+}
+
+
+/* 갤러리 */
+.gallery {
+    position: relative;
+}
+
+/* 관람정보 */
+.info {
+    position: relative;
+}
+
+/* 브랜드 */
+.brand {
+    position: relative;
+}
+
+/* 하단영역 */
+.footer {
+    position: relative;
+}
+
+/* 주소 */
+.addr {
+    position: relative;
+}
+
+/* 카피라이터 */
+.copy {
+    position: relative;
+}
